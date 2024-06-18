@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import { FormEvent, useEffect, useState } from "react";
 
 import { Input } from "@/components/Inputs";
-import { Checkbox } from "@/components/Checkbox";
+import { Radio } from "@/components/Radio";
 
 import animation from "../animation/sendEmail.json";
 
@@ -40,7 +40,7 @@ export default function Home() {
               <Input value={setLastName} title="Last Name" type="text" placeholder="Doe" required />
             </div>
             <Input value={setEmailAddress} title="Email Address" type="email" placeholder="johndoe@example.com" required />
-            <Checkbox title="Query Type" required options={["General Enquiry", "Support Request"]} value={setQueryType} />
+            <Radio title="Query Type" required options={["General Enquiry", "Support Request"]} value={setQueryType} selected={queryType} />
             <Input value={setMessage} title="Message" type="textarea" placeholder="Your message" required />
 
             <div className="flex gap-4 py-2">
